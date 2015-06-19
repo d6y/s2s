@@ -20,7 +20,9 @@ scalacOptions ++= Seq(
   "-Xfuture"
 )
 
-libraryDependencies ++= cats ++ logging ++ excel //++ testing
+libraryDependencies ++= cats ++ logging ++ excel ++ parboiled //++ testing
+
+lazy val parboiled = Seq("org.parboiled" %% "parboiled" % "2.1.0")
 
 lazy val logging = Seq( "ch.qos.logback" %  "logback-classic" % "1.1.3")
 
